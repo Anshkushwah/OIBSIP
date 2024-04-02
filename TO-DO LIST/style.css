@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+body{
+    background-color: blue;
+}
+.todo{
+
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+.todo img{
+    width: 43px;
+    height: 43px;
+    margin-left: 10px;
+
+}
+.todo{
+    color: #002765;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: #fff;
+    background: #8c45ff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png.png);
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    
+}
+ul li.checked::before{
+    background-image: url(checked.svg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius:50% ;
+}
+ul li span:hover{
+    background: #edeef0;
+}
